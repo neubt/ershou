@@ -15,7 +15,6 @@ if ActiveSupport::TestCase.method_defined?(:fixture_path=)
 end
 
 class ActionController::TestCase
-  include Ershou::Engine.routes.url_helpers
   include Devise::TestHelpers
 end
 
