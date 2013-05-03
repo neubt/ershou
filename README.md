@@ -17,6 +17,9 @@ bundle install
 rake db:migrate:reset
 test/dummy/script/rails s
 ```
+
+使用浏览器打开：http://localhost:3000/ershou
+
 ## 项目测试
 
 ```bash
