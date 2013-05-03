@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= render_page_title %>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= yield :head %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div class="header">
+    <div class="container">
+      <div>
+        <div class="pull-right">
+          <% if user_signed_in? %>
+            <%= link_to current_user.name, main_app.user_path(current_user) %>
+            <%= link_to 'Logout', main_app.destroy_user_session_path, :method => :delete %>
+          <% else %>
+            <%= link_to 'Login', main_app.new_user_session_path %>
+          <% end %>
+        </div>
+        <br />
+      </div>
+      <%= image_tag("logo.gif") %>
+      <%= render_list :class => "nav nav-tabs" do |li|
+        li << link_to("二手", ershou.topics_path)
+      end %>
+    </div>
+  </div>
+  
+  <div class="container">
+    <%= render_breadcrumb %>
+    <div class="content">
+      <%= content_for?(:content) ? yield(:content) : yield %>
+    </div>
+    
+    <div class="footer">
+      <div class="pull-right">
+        <div><%= link_to "六维空间", "http://bt.neu6.edu.cn" %></div>
+        <div><%= Time.now %></div>
+      </div>
+      <div>
+        <div>Powered by Discuz!</div>
+        <div>© 2009-2013 bt.neu6.edu.cn.</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

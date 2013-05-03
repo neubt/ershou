@@ -1,0 +1,30 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+.topics {
+  .topic.media {
+  
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    color: #bbb;
+    font-size: 12px;
+    
+    a {
+      color: #bbb;
+      text-decoration: underline;
+    }
+    
+    .media-heading {
+      margin-top: 2px;
+      font-size: 16px;
+      a {
+        text-decoration: none;
+        color: #08C;
+      }
+    }
+    
+  }
+}

@@ -1,0 +1,18 @@
+.widget
+  .widget-header.media
+    .avatar.pull-left
+      = image_tag @topic.user.avatar(:small), :class => "media-object"
+    .media-body
+      h4.media-heading = @topic.title
+      span.user = link_to @topic.user.name, main_app.user_path(@topic.user) if @topic.user
+      span.created_at = " #{time_ago_in_words(@topic.created_at)}前发表"
+
+  .widget-content
+    = @topic.content
+
+
+.widget.comments
+  = render @topic.comments.decorate
+
+.widget
+  = render :partial => 'ershou/comments/form', :locals => { :comment => @topic.comments.build }

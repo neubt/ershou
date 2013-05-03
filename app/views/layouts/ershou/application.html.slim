@@ -1,0 +1,12 @@
+- content_for :head do
+  = stylesheet_link_tag    "ershou/application", :media => "all"
+
+- content_for :content do
+  .row-fluid
+    .span9
+      = yield
+    .span3
+      .widget
+        = link_to 'New Topic', new_topic_path
+
+= render :template => "layouts/application"
