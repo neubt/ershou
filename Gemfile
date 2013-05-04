@@ -32,3 +32,4 @@ gem "bootstrap-sass", "~> 2.3.0.1"
 
 gem "bootstrap_helper", "~> 2.2.0"
 gem "draper", "~> 1.2.0"
+gem "common", :git => "git://github.com/neubt/common"

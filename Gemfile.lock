@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/neubt/common
+  revision: 9bc8b05ba6426bb335f177150a5f23c534699a12
+  specs:
+    common (0.0.1)
+      devise (~> 2.2.3)
+      draper (~> 1.2.0)
+      rails (~> 3.2.13)
+
 PATH
   remote: .
   specs:
@@ -173,6 +182,7 @@ DEPENDENCIES
   bootstrap-wysihtml5-rails (~> 0.3.1.19)
   bootstrap_helper (~> 2.2.0)
   coffee-rails (~> 3.2.2)
+  common!
   draper (~> 1.2.0)
   ershou!
   factory_girl_rails (~> 4.2.1)
