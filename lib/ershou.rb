@@ -1,6 +1,5 @@
 require "ershou/engine"
 
-require "devise"
 require "cancan"
 require "inherited_resources"
 require "simple_form"

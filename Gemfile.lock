@@ -12,7 +12,6 @@ PATH
   specs:
     ershou (0.0.1)
       cancan (~> 1.6.9)
-      devise (~> 2.2.3)
       inherited_resources (~> 1.4.0)
       kaminari (~> 0.14.1)
       rails (~> 3.2.13)
@@ -183,7 +182,6 @@ DEPENDENCIES
   bootstrap_helper (~> 2.2.0)
   coffee-rails (~> 3.2.2)
   common!
-  draper (~> 1.2.0)
   ershou!
   factory_girl_rails (~> 4.2.1)
   jquery-rails

@@ -19,7 +19,6 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 3.2.13"
   s.add_dependency "simple_form", "~> 2.0.4"
   # s.add_dependency "jquery-rails"
-  s.add_dependency "devise", "~> 2.2.3"
   s.add_dependency "cancan", "~> 1.6.9"
   s.add_dependency "inherited_resources", "~> 1.4.0"
   s.add_dependency "kaminari", "~> 0.14.1"
