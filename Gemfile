@@ -19,7 +19,6 @@ gem "jquery-rails"
 group :assets do
   gem 'sass-rails',   '~> 3.2.6'
   gem 'therubyracer', :platforms => :ruby
-  gem "bootstrap-wysihtml5-rails", "~> 0.3.1.19"
   gem "bootstrap-datepicker-rails", "~> 1.0.0.5"
 end
 
