@@ -1,11 +1,14 @@
 GIT
   remote: git://github.com/neubt/common
-  revision: 606189e24b802dd518781231c406ed5ceb2fb025
+  revision: 605b6465c86bf5f7e791df12db03a2bb1d9626e7
   specs:
     common (0.0.1)
+      bootstrap-sass (~> 2.3.1.0)
+      bootstrap_helper (~> 2.2.0)
       devise (~> 2.2.3)
       draper (~> 1.2.0)
       rails (~> 3.2.13)
+      sass-rails (~> 3.2.6)
 
 PATH
   remote: .
@@ -20,7 +23,7 @@ PATH
       state_machine (~> 1.2.0)
 
 GEM
-  remote: http://ruby.taobao.org/
+  remote: http://rubygems.org/
   specs:
     actionmailer (3.2.13)
       actionpack (= 3.2.13)
@@ -53,7 +56,7 @@ GEM
     bcrypt-ruby (3.0.1)
     bootstrap-datepicker-rails (1.0.0.5)
       railties (>= 3.0)
-    bootstrap-sass (2.3.0.1)
+    bootstrap-sass (2.3.1.0)
       sass (~> 3.2)
     bootstrap_helper (2.2.0)
       railties (~> 3.0)
@@ -175,8 +178,6 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-datepicker-rails (~> 1.0.0.5)
-  bootstrap-sass (~> 2.3.0.1)
-  bootstrap_helper (~> 2.2.0)
   coffee-rails (~> 3.2.2)
   common!
   ershou!
