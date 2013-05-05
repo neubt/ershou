@@ -14,6 +14,8 @@ module Ershou
       
       can :create,  Comment
       can :read,    Comment
+      can :update,  Comment
+      can :destroy, Comment
     end
   end
 
