@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/neubt/common
-  revision: 9bc8b05ba6426bb335f177150a5f23c534699a12
+  revision: 606189e24b802dd518781231c406ed5ceb2fb025
   specs:
     common (0.0.1)
       devise (~> 2.2.3)
