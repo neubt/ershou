@@ -7,28 +7,16 @@ module Ershou
     inherit_resources
     
     def show
-      @topic = Topic.find(params[:id]).decorate
-  
-      respond_to do |format|
-        format.html # show.html.erb
-        format.json { render json: @topic }
-      end
+      super {
+        @topic = resource.decorate
+      }
     end
   
     def create
-      @topic = Topic.new(params[:topic])
+      @topic = build_resource
       @topic.user = current_user
       @topic.remote_ip = request.remote_ip
-
-      respond_to do |format|
-        if @topic.save
-          format.html { redirect_to @topic, notice: 'Topic was successfully created.' }
-          format.json { render json: @topic, status: :created, location: @topic }
-        else
-          format.html { render action: "new" }
-          format.json { render json: @topic.errors, status: :unprocessable_entity }
-        end
-      end
+      super
     end
 
     protected
