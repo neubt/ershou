@@ -5,6 +5,7 @@ module Ershou
 
     load_and_authorize_resource :class => Topic
     inherit_resources
+    
 
     # GET /topics
     # GET /topics.json
@@ -45,7 +46,30 @@ module Ershou
         end
       end
     end
-  
 
+    # GET /topics/edit/1/edit
+    def edit
+      @topic = Topic.find(params[:id]).decorate
+
+      respond_to do |format|
+        format.html  # edit.html.erb
+      end
+    end
+
+    # POST /topic/1
+    def update
+      @topic = Topic.find(params[:id])
+
+      respond_to do |format|
+        if @topic.update_attributes(params[:topic])
+          format.html { redirect_to(@topic, :notice => 'Topic was successfully updated.') }
+          format.json { head :no_content }
+        else
+          format.html { render :action => "edit" }
+          format.json { render :json => @topic.errors, :status => :unprocessable_entity }
+        end
+      end
+    end
   end
 end
+
