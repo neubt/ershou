@@ -14,7 +14,7 @@ module Ershou
       
       can :create,  Comment
       can :read,    Comment
-      can :update,  Comment
+      can :update,  Comment, :user_id => user.id
       can :destroy, Comment
     end
   end

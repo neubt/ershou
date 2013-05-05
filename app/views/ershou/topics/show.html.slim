@@ -4,13 +4,13 @@
       = image_tag @topic.user.avatar(:small), :class => "media-object"
     .media-body
       h4.media-heading = @topic.title
-      span.edit = link_to_if(current_user == @topic.user, "编辑", { :controller => "topics", :action => "edit" })
+      - if can? :update, @topic
+        span = link_to "编辑", [:edit, @topic]
       span.user = link_to @topic.user.name, main_app.user_path(@topic.user) if @topic.user
       span.created_at = " #{time_ago_in_words(@topic.created_at)}前发表"
 
   .widget-content
     = @topic.content
-
 
 .widget.comments
   = render @topic.comments.decorate
