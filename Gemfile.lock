@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/neubt/common
-  revision: 0365336c20b2c3e2809050e104fa3176a8d39dd8
+  revision: f4f47e5c0e694bb405cca36362f4d5d7682c02b2
   specs:
     common (0.0.1)
       bootstrap-sass (~> 2.3.1.0)
@@ -9,6 +9,7 @@ GIT
       draper (~> 1.2.0)
       rails (~> 3.2.13)
       sass-rails (~> 3.2.6)
+      simple_form (~> 2.0.4)
       slim (~> 1.3.8)
 
 PATH
