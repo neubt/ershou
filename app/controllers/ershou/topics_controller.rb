@@ -6,20 +6,6 @@ module Ershou
     load_and_authorize_resource :class => Topic
     inherit_resources
     
-
-    # GET /topics
-    # GET /topics.json
-    def index
-      @topics = Topic.page(params[:page]).reverse_order.decorate
-  
-      respond_to do |format|
-        format.html # index.html.erb
-        format.json { render json: @topics }
-      end
-    end
-  
-    # GET /topics/1
-    # GET /topics/1.json
     def show
       @topic = Topic.find(params[:id]).decorate
   
@@ -29,8 +15,6 @@ module Ershou
       end
     end
   
-    # POST /topics
-    # POST /topics.json
     def create
       @topic = Topic.new(params[:topic])
       @topic.user = current_user
@@ -47,29 +31,10 @@ module Ershou
       end
     end
 
-    # GET /topics/edit/1/edit
-    def edit
-      @topic = Topic.find(params[:id]).decorate
-
-      respond_to do |format|
-        format.html  # edit.html.erb
+    protected
+      def collection
+        @topics = end_of_association_chain.page(params[:page]).reverse_order.decorate
       end
-    end
-
-    # POST /topic/1
-    def update
-      @topic = Topic.find(params[:id])
-
-      respond_to do |format|
-        if @topic.update_attributes(params[:topic])
-          format.html { redirect_to(@topic, :notice => 'Topic was successfully updated.') }
-          format.json { head :no_content }
-        else
-          format.html { render :action => "edit" }
-          format.json { render :json => @topic.errors, :status => :unprocessable_entity }
-        end
-      end
-    end
   end
 end
 
