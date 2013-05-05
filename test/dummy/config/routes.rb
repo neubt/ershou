@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
 
-  mount Ershou::Engine => "/ershou"
+  mount Ershou::Engine => "/"
 end
