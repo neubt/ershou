@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/neubt/common
-  revision: 8801f21328a4d6264987cdc345ddd11dc042b85b
+  revision: b59e5e6eaedd4aef037eddde6fccd3708f8deae6
   specs:
     common (0.0.1)
       bootstrap-sass (~> 2.3.1.0)
