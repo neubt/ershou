@@ -7,6 +7,7 @@
       = yield
     .span3
       .widget
-        = link_to 'New Topic', new_topic_path
+        = link_to 'New Topic', new_topic_path, :class => "btn"
+        = link_to 'My Topics', [:settings, :topics], :class => "btn"
 
 = render :template => "layouts/application"

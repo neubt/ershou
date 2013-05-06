@@ -6,6 +6,11 @@ Ershou::Engine.routes.draw do
   resources :topics do
     resources :comments
   end
+
+  namespace :settings do
+    resources :topics
+    resources :comments
+  end
   
   namespace :admin do
     resources :nodes
