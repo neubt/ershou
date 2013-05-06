@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130502034301) do
+ActiveRecord::Schema.define(:version => 20130506021254) do
 
   create_table "ershou_comments", :force => true do |t|
     t.text     "content"
@@ -22,9 +22,17 @@ ActiveRecord::Schema.define(:version => 20130502034301) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "ershou_locations", :force => true do |t|
+    t.string   "prefix"
+    t.integer  "node_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "ershou_nodes", :force => true do |t|
     t.string   "name"
-    t.string   "prefix"
+    t.string   "city"
+    t.string   "province"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
