@@ -1,0 +1,3 @@
+table.table
+  = content_tag_for :tr, @topics do |topic|
+    td = link_to topic.title, topic
