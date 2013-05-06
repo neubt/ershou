@@ -42,6 +42,17 @@ module Ershou
       put :update, id: @topic, topic: { content: @topic.content, title: @topic.title }
       assert_redirected_to topic_path(assigns(:topic))
     end
+
+    test "should close topic" do
+      put :close, id: @topic
+      assert_redirected_to topic_path(assigns(:topic))
+    end
+
+    test "should open topic" do
+      @topic.fire_events(:close)
+      put :open, id: @topic
+      assert_redirected_to topic_path(assigns(:topic))
+    end
   
     test "should destroy topic" do
       assert_difference('Topic.count', -1) do
