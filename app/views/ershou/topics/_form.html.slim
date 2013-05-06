@@ -4,9 +4,7 @@
   .form-actions
     = f.submit :class => "btn"
 
-    - if @topic.title
-      - if can? :update, @topic
-        - if @topic.state == 'open'
-          = link_to 'Close', [:close, @topic], :method => :put, :confirm => "Are u sure?"
-        - if @topic.state == 'closed'
-          = link_to 'Reopen', [:open, @topic], :method => :put
+    - if can? :close, @topic
+      = link_to 'Close', [:close, @topic], :method => :put, :confirm => "Are u sure?"
+    - if can? :open, @topic
+      = link_to 'Reopen', [:open, @topic], :method => :put, :confirm => "Are u sure?"

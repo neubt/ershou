@@ -20,19 +20,13 @@ module Ershou
     end
 
     def open
-      @topic = resource.decorate
-      if @topic.state == 'closed'
-        @topic.reopen!
-      end
-      redirect_to @topic
+      resource.fire_events(:open)
+      redirect_to resource
     end
 
     def close
-      @topic = resource.decorate
-      if @topic.state == 'open'
-        @topic.close!
-      end
-      redirect_to @topic
+      resource.fire_events(:close)
+      redirect_to resource
     end
 
     protected

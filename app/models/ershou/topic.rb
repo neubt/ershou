@@ -5,13 +5,12 @@ module Ershou
 
     has_many :comments
 
+    validates :title, :presence => true
+
     state_machine :initial => :open do
-      state :open
-      state :closed
-      event 'reopen' do
+      event 'open' do
         transition all => :open
       end
-
       event 'close' do
         transition all => :closed
       end
