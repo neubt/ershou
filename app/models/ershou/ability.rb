@@ -11,6 +11,8 @@ module Ershou
       can :read,    Topic
       can :update,  Topic
       can :destroy, Topic
+      can :close,  Topic, :user_id => user.id
+      can :open,  Topic, :user_id => user.id
       
       can :create,  Comment
       can :read,    Comment

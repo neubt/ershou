@@ -19,6 +19,22 @@ module Ershou
       super
     end
 
+    def open
+      @topic = resource.decorate
+      if @topic.state == 'closed'
+        @topic.reopen!
+      end
+      redirect_to @topic
+    end
+
+    def close
+      @topic = resource.decorate
+      if @topic.state == 'open'
+        @topic.close!
+      end
+      redirect_to @topic
+    end
+
     protected
       def collection
         @topics = end_of_association_chain.page(params[:page]).reverse_order.decorate
