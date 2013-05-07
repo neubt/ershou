@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130507012926) do
+ActiveRecord::Schema.define(:version => 20130507033110) do
 
   create_table "ershou_comments", :force => true do |t|
     t.text     "content"

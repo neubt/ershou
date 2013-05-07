@@ -24,6 +24,5 @@ test/dummy/script/rails s
 
 ```bash
 cd ershou
-RAILS_ENV=test rake db:migrate:reset
-rake
+RAILS_ENV=test rake db:migrate test
 ```
