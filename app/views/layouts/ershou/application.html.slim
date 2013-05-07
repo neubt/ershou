@@ -7,11 +7,12 @@
       = yield
     .span3
       .widget
+        = link_to 'New Topic', new_topic_path, :class => "btn"
+        = link_to 'My Topics', [:settings, :topics], :class => "btn"
+
+      .widget.widget-info.widget-bordered
         h4 所有节点
         ul = content_tag_for :li, @nodes do |node|
           = node.name
-
-        = link_to 'New Topic', new_topic_path, :class => "btn"
-        = link_to 'My Topics', [:settings, :topics], :class => "btn"
 
 = render :template => "layouts/application"
