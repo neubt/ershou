@@ -1,5 +1,5 @@
-= content_tag_for :tr, comment do
-  td width="48"
+= div_for comment, :class => "media" do
+  .pull-left
     = image_tag comment.user.avatar(:small)
-  td
+  .media-body
     = simple_format comment.content
