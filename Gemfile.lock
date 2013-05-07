@@ -1,4 +1,10 @@
 GIT
+  remote: git://github.com/neubt/bootstrap-widgets
+  revision: 8a577f359241a83e328d452ed12bcc75f51f5aa7
+  specs:
+    bootstrap-widgets (0.0.1)
+
+GIT
   remote: git://github.com/neubt/common
   revision: 0cc9752e51061e3543e01bf31e40c1ef09c8bc6d
   specs:
@@ -192,6 +198,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-datepicker-rails (~> 1.0.0.5)
+  bootstrap-widgets!
   coffee-rails (~> 3.2.2)
   common!
   ershou!
