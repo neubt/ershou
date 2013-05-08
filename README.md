@@ -38,3 +38,12 @@ RAILS_ENV=test rake db:migrate test
 7. 开发完之后，连同分支提交到 github
 8. 在 github 上开一个你提交的 pull-request
 
+## Contributing
+
+1. Fork it
+2. Create your feature branch (git checkout -b my-new-feature)
+3. Commit your changes (git commit -am 'Add some feature')
+4. Push to the branch (git push origin my-new-feature)
+5. Create new Pull Request
+
+
