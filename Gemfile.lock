@@ -6,13 +6,13 @@ GIT
 
 GIT
   remote: git://github.com/neubt/common
-  revision: 0067214e9c483f89df5cd874977f9bd41e2c5c51
+  revision: 73157f19d823dc7896d7a3f919256b8ba483c441
   specs:
     common (0.0.1)
       bootstrap-sass (~> 2.3.1.0)
       bootstrap_helper (~> 2.2.0)
       carrierwave (~> 0.8.0)
-      devise (~> 2.2.3)
+      devise (~> 2.2.4)
       draper (~> 1.2.0)
       mini_magick (~> 3.5.0)
       rails (~> 3.2.13)
@@ -86,7 +86,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.2)
-    devise (2.2.3)
+    devise (2.2.4)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
       railties (~> 3.1)
