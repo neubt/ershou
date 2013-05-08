@@ -1,8 +1,9 @@
 GIT
   remote: git://github.com/neubt/bootstrap-widgets
-  revision: 44e98e40e17fcc5b774459881c8a429c51a73f45
+  revision: 9d7b7d711086e1f2bcebc82ae8e71a887fadd4fb
   specs:
     bootstrap-widgets (0.0.1)
+      bootstrap-sass (~> 2.3.1.0)
 
 GIT
   remote: git://github.com/neubt/common
