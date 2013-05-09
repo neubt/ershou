@@ -4,7 +4,7 @@
   .form-actions
     .pull-right
       - if can? :close, @topic
-        =' link_to '关闭', [:close, @topic], :method => :put, :class => "btn"
+        =' link_to '关闭交易', [:close, @topic], :method => :put, :class => "btn"
       - if can? :open, @topic
-        =' link_to '打开', [:open, @topic], :method => :put, :class => "btn"
+        =' link_to '打开交易', [:open, @topic], :method => :put, :class => "btn"
       = f.submit "发布评论", :class => "btn btn-success"

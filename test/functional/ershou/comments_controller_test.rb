@@ -12,7 +12,7 @@ module Ershou
 
     test "should create comment" do
       assert_difference('Comment.count') do
-        post :create, topic_id: @topic, comment: {  }, format: 'js'
+        post :create, topic_id: @topic, comment: { content: "Content" }, format: 'js'
       end
 
       assert_response :success

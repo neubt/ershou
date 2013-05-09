@@ -3,6 +3,9 @@
     = image_tag comment.user.avatar(:small)
   .media-body
     .media-heading
+      .pull-right
+        - if can? :update, comment
+          = link_to "编辑", [:edit, @topic, comment]
       span.user = link_to @topic.user.name, main_app.user_path(@topic.user) if @topic.user
       span.created_at = " #{time_ago_in_words(@topic.created_at)}前发表"
     = simple_format comment.content
