@@ -10,5 +10,7 @@ require "kaminari-bootstrap"
 require "slim"
 require "state_machine"
 
+require 'redcarpet/compat'
+
 module Ershou
 end
