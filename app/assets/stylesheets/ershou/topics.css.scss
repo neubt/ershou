@@ -28,3 +28,27 @@
     
   }
 }
+
+.topic {
+  .widget-header {
+    &.media {
+      color: #bbb;
+      font-size: 12px;
+
+      a {
+        color: #bbb;
+        text-decoration: underline;
+      }
+
+      .media-heading {
+        color: #333;
+        margin: 3px 0;
+        
+        a {
+          color: #08C;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

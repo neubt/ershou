@@ -1,0 +1,22 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+.comments {
+  .comment {
+    &.media {
+      .media-body {
+        .media-heading {
+          font-size: 12px;
+          color: #bbb;
+          
+          a {
+            color: #bbb;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
