@@ -1,0 +1,9 @@
+zh-CN:
+  activerecord:
+    models:
+      ershou/topic: 交易
+      
+  helpers:
+    submit:
+      topic:
+        create: "发布%{model}"
