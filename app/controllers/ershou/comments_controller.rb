@@ -19,5 +19,11 @@ module Ershou
       end
     end
     
+    def destroy
+      super do |success, failure|
+        failure.js { render :js => "alert('Error');" }
+      end
+    end
+
   end
 end
