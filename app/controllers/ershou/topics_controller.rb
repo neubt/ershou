@@ -31,7 +31,7 @@ module Ershou
 
     protected
       def collection
-        @topics = end_of_association_chain.page(params[:page]).reverse_order.decorate
+        @topics = end_of_association_chain.where(:state => :open).page(params[:page]).reverse_order.decorate
       end
   end
 end
