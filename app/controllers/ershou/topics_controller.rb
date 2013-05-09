@@ -28,6 +28,10 @@ module Ershou
       resource.fire_events(:close)
       redirect_to resource
     end
+    
+    def preview
+      
+    end
 
     protected
       def collection

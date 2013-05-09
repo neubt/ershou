@@ -1,5 +1,14 @@
 = simple_form_for [@topic, comment], :remote => true, :html => { :class => "form-inline" } do |f|
-  = f.input :content, :label => false, :input_html => { :rows => 5, :class => :span12, :placeholder => "输入评论内容" }
+
+  ul.nav.nav-tabs
+    li.active = link_to "编写", "#content", "data-toggle" => "tab"
+    li = link_to "预览", "#preview", "data-toggle" => "tab"
+    
+  .tab-content
+    .tab-pane#content.active
+      = f.input :content, :label => false, :input_html => { :rows => 5, :class => :span12, :placeholder => "输入评论内容" }
+    .tab-pane#preview
+      | 正在预览...
 
   .form-actions
     .pull-right

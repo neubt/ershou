@@ -4,11 +4,10 @@ Ershou::Engine.routes.draw do
   
   resources :nodes
   resources :topics do
+    put :open, on: :member
+    put :close, on: :member
+    post :preview, on: :collection
     resources :comments
-    member do
-      put 'open'
-      put 'close'
-    end
   end
 
   namespace :settings do

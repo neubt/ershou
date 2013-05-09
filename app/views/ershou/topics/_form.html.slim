@@ -1,10 +1,20 @@
 = simple_form_for @topic, :html => { :class => "form-inline" } do |f|
   = f.input :title, :label => false, :input_html => { :placeholder => "标题", :class => :span12 }
-  = f.input :content, :label => false, :input_html => { :rows => 5, :class => :span12, :placeholder => "内容" }
+  
+  ul.nav.nav-tabs
+    li.active = link_to "编写", "#content", "data-toggle" => "tab"
+    li = link_to "预览", "#preview", "data-toggle" => "tab"
+    
+  .tab-content
+    .tab-pane#content.active
+      = f.input :content, :label => false, :input_html => { :rows => 5, :class => :span12, :placeholder => "内容" }
+    .tab-pane#preview
+      | 正在预览...
+  
   .form-actions
-    = f.submit "发布物品", :class => "btn"
-
-    - if can? :close, @topic
-      = link_to 'Close', [:close, @topic], :method => :put, :confirm => "Are u sure?"
-    - if can? :open, @topic
-      = link_to 'Reopen', [:open, @topic], :method => :put, :confirm => "Are u sure?"
+    .pull-right
+      - if can? :close, @topic
+        =' link_to '关闭交易', [:close, @topic], :method => :put, :class => "btn"
+      - if can? :open, @topic
+        =' link_to '重新打开', [:open, @topic], :method => :put, :class => "btn"
+      =' f.submit :class => "btn btn-success"
