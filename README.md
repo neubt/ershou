@@ -29,21 +29,22 @@ RAILS_ENV=test rake db:migrate test
 
 ## 贡献代码
 
-1. 从 github 上 fork neubt/ershou 的项目
-2. 把你的用户下的 ershou 项目 clone 到本地
-3. 将你本地的 ershou 项目增加 neubt 的原始项目地址
-4. 获取最新的 neubt 的代码，并 merge master 分支
-5. 本地新建一个开发分支
-6. 本地开发新功能
-7. 开发完之后，连同分支提交到 github
-8. 在 github 上开一个你提交的 pull-request
+1. Watch 这个项目
+2. 从 github 上 fork neubt/ershou 的项目
+3. 把你的用户下的 ershou 项目 clone 到本地
+4. 将你本地的 ershou 项目增加 neubt 的原始项目地址
+5. 获取最新的 neubt 的代码，并 merge master 分支
+6. 本地新建一个开发分支
+7. 本地开发新功能
+8. 开发完之后，连同分支提交到 github
+9. 在 github 上开一个你提交的 pull-request
 
 ## Contributing
 
-1. Fork it
-2. Create your feature branch (git checkout -b my-new-feature)
-3. Commit your changes (git commit -am 'Add some feature')
-4. Push to the branch (git push origin my-new-feature)
-5. Create new Pull Request
-
+1. Watch it
+2. Fork it
+3. Create your feature branch (git checkout -b my-new-feature)
+4. Commit your changes (git commit -am 'Add some feature')
+5. Push to the branch (git push origin my-new-feature)
+6. Create new Pull Request
 
