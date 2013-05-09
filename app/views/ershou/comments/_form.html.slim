@@ -7,4 +7,4 @@
         =' link_to '关闭', [:close, @topic], :method => :put, :class => "btn"
       - if can? :open, @topic
         =' link_to '打开', [:open, @topic], :method => :put, :class => "btn"
-      = f.submit :class => "btn btn-success"
+      = f.submit "发布评论", :class => "btn btn-success"

@@ -1,8 +1,8 @@
 = simple_form_for @topic, :html => { :class => "form-inline" } do |f|
-  = f.input :title, :label => false, :input_html => { :placeholder => "标题", :class => :span10 }
-  = f.input :content, :label => false, :input_html => { :rows => 5, :class => :span10, :placeholder => "内容" }
+  = f.input :title, :label => false, :input_html => { :placeholder => "标题", :class => :span12 }
+  = f.input :content, :label => false, :input_html => { :rows => 5, :class => :span12, :placeholder => "内容" }
   .form-actions
-    = f.submit :class => "btn"
+    = f.submit "发布物品", :class => "btn"
 
     - if can? :close, @topic
       = link_to 'Close', [:close, @topic], :method => :put, :confirm => "Are u sure?"
