@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20130507033110) do
   create_table "ershou_topics", :force => true do |t|
     t.string   "title"
     t.string   "price"
+    t.string   "phone"
     t.text     "content"
     t.string   "remote_ip"
     t.string   "state"

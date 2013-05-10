@@ -4,7 +4,7 @@ module Ershou
   class Topic < ActiveRecord::Base
 
     attr_accessible :title, :content
-    attr_accessible :price
+    attr_accessible :price, :phone
 
     belongs_to :user
     belongs_to :node

@@ -5,6 +5,7 @@ zh-CN:
     attributes:
       ershou/topic:
         price: 价格
+        phone: 电话
       
   helpers:
     submit:
