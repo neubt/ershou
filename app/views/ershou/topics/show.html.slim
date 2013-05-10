@@ -4,7 +4,9 @@
       = image_tag @topic.user.avatar(:small), :class => "media-object"
     .media-body
       h4.media-heading
-        .pull-right = @topic.human_state_name
+        .pull-right
+          span.label =' @topic.node.name
+          =' @topic.human_state_name
         = @topic.title 
       - if can? :update, @topic
         span =' link_to "编辑", [:edit, @topic]

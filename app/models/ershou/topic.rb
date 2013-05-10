@@ -1,8 +1,13 @@
+require 'ipaddr'
+
 module Ershou
   class Topic < ActiveRecord::Base
-    attr_accessible :title, :content
-    belongs_to :user
 
+    attr_accessible :title, :content
+    attr_accessible :price
+
+    belongs_to :user
+    belongs_to :node
     has_many :comments
 
     validates :title, :presence => true
@@ -15,6 +20,19 @@ module Ershou
         transition all => :closed
       end
 
+    end
+
+    before_create do |topic|
+      if topic.remote_ip
+        remote_ip = IPAddr.new topic.remote_ip
+        Location.all.each do |location|
+          prefix = IPAddr.new location.prefix
+          if prefix.include?(remote_ip)
+            topic.node = location.node
+            break
+          end
+        end
+      end
     end
 
   end

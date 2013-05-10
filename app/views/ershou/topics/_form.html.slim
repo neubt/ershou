@@ -1,6 +1,8 @@
 = simple_form_for @topic, :html => { :class => "form-inline" } do |f|
+
   = f.input :title, :label => false, :input_html => { :placeholder => "标题", :class => :span12 }
-  
+  = f.input :price
+
   ul.nav.nav-tabs
     li.active = link_to "编写", "#content", "data-toggle" => "tab"
     li = link_to "预览", "#preview", "data-toggle" => "tab"

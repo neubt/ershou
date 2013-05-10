@@ -7,6 +7,7 @@ class CreateErshouTopics < ActiveRecord::Migration
       t.string :remote_ip
       t.string :state
       t.references :user
+      t.references :node
       t.timestamps
     end
   end

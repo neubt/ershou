@@ -2,6 +2,9 @@ zh-CN:
   activerecord:
     models:
       ershou/topic: 交易
+    attributes:
+      ershou/topic:
+        price: 价格
       
   helpers:
     submit:

@@ -13,8 +13,8 @@ module Ershou
       can :update,  Topic
       can :destroy, Topic
 
-      can :close,  Topic, :new_record? => false, :user_id => user.id, :state => "open"
-      can :open,  Topic, :new_record? => false, :user_id => user.id, :state => "closed"
+      can :close,   Topic,   :new_record? => false, :user_id => user.id, :state => "open"
+      can :open,    Topic,   :new_record? => false, :user_id => user.id, :state => "closed"
       
       can :preview, Comment
       can :create,  Comment

@@ -13,11 +13,6 @@
       .widget.widget-info.widget-bordered
         h4 所有节点
         ul = content_tag_for :li, @nodes do |node|
-          = node.name
-          
-      .widget.widget-success.widget-bordered
-        h4 所有节点
-        ul = content_tag_for :li, @nodes do |node|
-          = node.name
+          = link_to node.name, node
 
 = render :template => "layouts/application"

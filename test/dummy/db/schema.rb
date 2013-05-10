@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20130507033110) do
     t.string   "remote_ip"
     t.string   "state"
     t.integer  "user_id"
+    t.integer  "node_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
