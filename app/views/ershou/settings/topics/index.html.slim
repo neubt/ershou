@@ -1,3 +1,8 @@
+.nav.nav-pills
+  li.active = link_to "All", "#"
+  li = link_to "Open", "#"
+  li = link_to "Closed", "#"
+
 table.table
   = content_tag_for :tr, @topics do |topic|
     td = link_to topic.title, topic
