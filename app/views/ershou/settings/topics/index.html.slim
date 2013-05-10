@@ -1,7 +1,7 @@
-.nav.nav-pills
-  li.active = link_to "All", "#"
-  li = link_to "Open", "#"
-  li = link_to "Closed", "#"
+= render_list :class => "nav nav-pills" do |li|
+  - li << link_to("All", settings_topics_path(:state => :all))
+  - li << link_to("Open", settings_topics_path(:state => :open))
+  - li << link_to("Closed", settings_topics_path(:state => :closed))
 
 table.table
   = content_tag_for :tr, @topics do |topic|
