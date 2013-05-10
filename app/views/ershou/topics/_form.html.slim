@@ -26,7 +26,7 @@ javascript:
   $(document).ready(function() {
     $('.nav-tabs a[href="#preview"]').on('show', function(e) {
       $("#preview").html("正在预览...");
-      $.post("#{preview_topics_path}", $("#new_topic").serialize(), function(data) {
+      $.post("#{preview_topics_path}", $("form").serialize(), function(data) {
         $("#preview").html(data);
       });
     });

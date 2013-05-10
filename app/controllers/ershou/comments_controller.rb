@@ -24,6 +24,12 @@ module Ershou
       end
     end
     
+    def update
+      super do |success, failure|
+        success.html { redirect_to @comment.topic }
+      end
+    end
+    
     def destroy
       super do |success, failure|
         failure.js { render :js => "alert('Error');" }

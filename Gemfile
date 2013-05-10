@@ -28,5 +28,5 @@ end
 
 gem 'coffee-rails', '~> 3.2.2'
 
-gem "bootstrap-widgets", :git => "git://github.com/neubt/bootstrap-widgets"
-gem "common", :git => "git://github.com/neubt/common"
+gem "bootstrap-widgets", :git => "git://github.com/neubt/bootstrap-widgets.git"
+gem "common", :git => "git://github.com/neubt/common.git"

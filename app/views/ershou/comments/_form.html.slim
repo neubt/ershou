@@ -1,4 +1,4 @@
-= simple_form_for [@topic, comment], :remote => true, :html => { :class => "form-inline" } do |f|
+= simple_form_for [@topic, comment], :remote => request.format.js?, :html => { :class => "form-inline" } do |f|
 
   ul.nav.nav-tabs
     li.active = link_to "编写", "#content", "data-toggle" => "tab"
@@ -15,13 +15,13 @@
         =' link_to '关闭交易', [:close, @topic], :method => :put, :class => "btn"
       - if can? :open, @topic
         =' link_to '打开交易', [:open, @topic], :method => :put, :class => "btn"
-      = f.submit "发布评论", :class => "btn btn-success"
+      = f.submit :class => "btn btn-success"
 
 javascript:
   $(document).ready(function() {
     $('.nav-tabs a[href="#preview"]').on('show', function(e) {
       $("#preview").html("正在预览...");
-      $.post("#{preview_topic_comments_path(@topic)}", $("#new_comment").serialize(), function(data) {
+      $.post("#{preview_topic_comments_path(@topic)}", $("form").serialize(), function(data) {
         $("#preview").html(data);
       });
     });

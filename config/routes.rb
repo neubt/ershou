@@ -6,8 +6,10 @@ Ershou::Engine.routes.draw do
   resources :topics do
     put :open, on: :member
     put :close, on: :member
+    put :preview, on: :collection
     post :preview, on: :collection
     resources :comments do
+      put :preview, on: :collection
       post :preview, on: :collection
     end
   end

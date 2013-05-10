@@ -2,6 +2,7 @@ zh-CN:
   activerecord:
     models:
       ershou/topic: 交易
+      ershou/comment: 回复
     attributes:
       ershou/topic:
         price: 价格
@@ -9,5 +10,7 @@ zh-CN:
       
   helpers:
     submit:
+      comment:
+        create: "发表%{model}"
       topic:
         create: "发布%{model}"
