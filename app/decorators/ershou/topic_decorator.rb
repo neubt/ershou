@@ -6,6 +6,14 @@ module Ershou
     delegate_all
     decorates_association :user
 
+    def human_node_name
+      if source.node
+        content_tag :span, class: :label do
+          source.node.name
+        end
+      end
+    end
+
     def human_state_name
 
       html_classes = {

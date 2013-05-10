@@ -5,7 +5,7 @@
     .media-body
       h4.media-heading
         .pull-right
-          span.label =' @topic.node.name
+          =' @topic.human_node_name
           =' @topic.human_state_name
         = @topic.title 
       - if can? :update, @topic
