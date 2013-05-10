@@ -18,3 +18,13 @@
       - if can? :open, @topic
         =' link_to '重新打开', [:open, @topic], :method => :put, :class => "btn"
       =' f.submit :class => "btn btn-success"
+
+javascript:
+  $(document).ready(function() {
+    $('.nav-tabs a[href="#preview"]').on('show', function(e) {
+      $("#preview").html("正在预览...");
+      $.post("#{preview_topics_path}", $("#new_topic").serialize(), function(data) {
+        $("#preview").html(data);
+      });
+    });
+  });

@@ -7,7 +7,9 @@ Ershou::Engine.routes.draw do
     put :open, on: :member
     put :close, on: :member
     post :preview, on: :collection
-    resources :comments
+    resources :comments do
+      post :preview, on: :collection
+    end
   end
 
   namespace :settings do

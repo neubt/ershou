@@ -30,7 +30,8 @@ module Ershou
     end
     
     def preview
-      
+      @topic = Topic.new(params[:topic])
+      render :layout => false
     end
 
     protected

@@ -7,6 +7,11 @@ module Ershou
     inherit_resources
     belongs_to :topic, :parent_class => Topic
     
+    def preview
+      @comment = Comment.new(params[:comment])
+      render :layout => false
+    end
+
     def create
       @comment = build_resource
       @comment.topic = @topic

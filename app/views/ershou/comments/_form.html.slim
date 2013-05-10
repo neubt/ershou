@@ -8,7 +8,6 @@
     .tab-pane#content.active
       = f.input :content, :label => false, :input_html => { :rows => 5, :class => :span12, :placeholder => "输入评论内容" }
     .tab-pane#preview
-      | 正在预览...
 
   .form-actions
     .pull-right
@@ -17,3 +16,13 @@
       - if can? :open, @topic
         =' link_to '打开交易', [:open, @topic], :method => :put, :class => "btn"
       = f.submit "发布评论", :class => "btn btn-success"
+
+javascript:
+  $(document).ready(function() {
+    $('.nav-tabs a[href="#preview"]').on('show', function(e) {
+      $("#preview").html("正在预览...");
+      $.post("#{preview_topic_comments_path(@topic)}", $("#new_comment").serialize(), function(data) {
+        $("#preview").html(data);
+      });
+    });
+  });
