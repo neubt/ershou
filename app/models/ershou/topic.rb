@@ -23,14 +23,12 @@ module Ershou
     end
 
     before_create do |topic|
-      if topic.remote_ip
-        remote_ip = IPAddr.new topic.remote_ip
-        Location.all.each do |location|
-          prefix = IPAddr.new location.prefix
-          if prefix.include?(remote_ip)
-            topic.node = location.node
-            break
-          end
+      remote_ip = IPAddr.new topic.remote_ip || "0.0.0.0"
+      Location.all.each do |location|
+        prefix = IPAddr.new location.prefix || "0.0.0.0"
+        if prefix.include?(remote_ip)
+          topic.node = location.node
+          break
         end
       end
     end
