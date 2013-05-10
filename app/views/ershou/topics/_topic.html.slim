@@ -2,6 +2,6 @@
   .avatar.pull-left
     = image_tag topic.user.avatar(:small), :class => "media-object"
   .media-body
-    .media-heading = link_to topic.title, topic
+    .media-heading = link_to truncate(topic.title, :length => 40), topic
     span.user =' link_to topic.user.name, main_app.user_path(topic.user) if topic.user
     span.created_at = "#{time_ago_in_words(topic.created_at)}前发表"
