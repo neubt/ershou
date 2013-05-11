@@ -1,8 +1,8 @@
 = simple_form_for @topic, :html => { :class => "form-inline" } do |f|
 
   = f.input :title, :label => false, :input_html => { :placeholder => "标题", :class => :span12 }
-  = f.input :price
-  = f.input :phone
+  = f.input :price, :label => false, :input_html => { :placeholder => "价格", :class => :span6 }
+  = f.input :phone, :label => false, :input_html => { :placeholder => "电话", :class => :span6 }
   /= f.input :attachments
 
   ul.nav.nav-tabs
