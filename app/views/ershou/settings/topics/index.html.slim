@@ -5,6 +5,6 @@
 
 table.table
   = content_tag_for :tr, @topics do |topic|
-    td = link_to truncate(topic.title, :length => 60), topic
+    td = link_to truncate(topic.title, :length => 60), topic, :target => :_blank
 
 = paginate @topics
