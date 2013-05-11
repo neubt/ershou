@@ -1,7 +1,8 @@
-ul.nav.nav-tabs
-  li.active = link_to "本校交易", "#"
-  li = link_to "本地交易", "#"
-  li = link_to "所有交易", "#"
+- @current.delete(topics_path)
+= render_list :class => "nav nav-tabs" do |li|
+  - li << link_to("所有交易", topics_path)
+  - li << link_to("本地交易", node_path(current_node))
+- @current << topics_path
 
 .widget
   .widget-header
