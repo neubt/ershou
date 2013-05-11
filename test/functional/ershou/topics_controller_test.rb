@@ -22,7 +22,7 @@ module Ershou
   
     test "should create topic" do
       assert_difference('Topic.count') do
-        post :create, topic: { content: @topic.content, title: @topic.title }
+        post :create, topic: { content: @topic.content, title: @topic.title, price: 100, phone: 13888888888 }
       end
   
       assert_redirected_to topic_path(assigns(:topic))

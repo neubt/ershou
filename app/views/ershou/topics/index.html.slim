@@ -1,7 +1,8 @@
 - @current.delete(topics_path)
 = render_list :class => "nav nav-tabs" do |li|
   - li << link_to("所有交易", topics_path)
-  - li << link_to("本地交易", node_path(current_node))
+  - if current_node
+    - li << link_to("本地交易", node_path(current_node))
 - @current << topics_path
 
 .widget

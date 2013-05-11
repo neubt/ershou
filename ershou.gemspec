@@ -28,6 +28,8 @@ Gem::Specification.new do |s|
   s.add_dependency "slim", "~> 1.3.8"
   s.add_dependency "state_machine", "~> 1.2.0"
   
+  s.add_dependency "paperclip", "~> 3.4.1"
+  
   s.add_dependency "redcarpet", "~> 2.2.2"
 
   s.add_development_dependency "sqlite3"

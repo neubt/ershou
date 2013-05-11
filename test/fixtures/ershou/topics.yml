@@ -6,6 +6,8 @@ one:
   content: MyText
   user_id: 100
   state: open
+  price: 100
+  phone: 13888888888
 
 two:
   id: 200
@@ -13,3 +15,5 @@ two:
   content: MyText
   user_id: 100
   state: closed
+  price: 100
+  phone: 13888888888
