@@ -1,4 +1,4 @@
-= simple_form_for [@topic, comment], :remote => request.format.js?, :html => { :class => "form-inline" } do |f|
+= simple_form_for [@topic, comment], :remote => comment.new_record?, :html => { :class => "form-inline" } do |f|
 
   ul.nav.nav-tabs
     li.active = link_to "编写", "#content", "data-toggle" => "tab"
