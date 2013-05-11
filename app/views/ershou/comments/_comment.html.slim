@@ -8,6 +8,6 @@
           =' link_to "编辑", [:edit, @topic, comment]
         - if can? :destroy, comment
           =' link_to "删除", [@topic, comment], :method => :delete, remote: true, :confirm => "Are U Sure?"
-      span.user = link_to @topic.user.name, main_app.user_path(@topic.user) if @topic.user
-      span.created_at = " #{time_ago_in_words(@topic.created_at)}前发表"
+      span.user = link_to comment.user.name, main_app.user_path(comment.user) if comment.user
+      span.created_at = " #{time_ago_in_words(comment.created_at)}前发表"
     = markdown comment.content
