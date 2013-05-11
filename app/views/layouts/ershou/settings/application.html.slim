@@ -1,9 +1,8 @@
 - content_for :content do
-  ul.nav.nav-tabs
-    li.active
-      = link_to "我的交易", settings_topics_path
-    li
-      = link_to "我的回复", settings_comments_path
+  = render_list :class => "nav nav-tabs" do |li|
+    - li << link_to("我的交易", settings_topics_path)
+    - li << link_to("我的回复", settings_comments_path)
+    
   = yield
 
 = render :template => "layouts/application"
