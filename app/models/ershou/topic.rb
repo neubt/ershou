@@ -9,6 +9,7 @@ module Ershou
     belongs_to :user
     belongs_to :node
     has_many :comments, :dependent => :destroy
+    #has_many :attachments, :dependent => :destroy
 
     validates :title, :presence => true
 
