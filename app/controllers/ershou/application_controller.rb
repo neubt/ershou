@@ -4,8 +4,6 @@ module Ershou
   class ApplicationController < ::ApplicationController
 
     respond_to :html, :js
-    before_filter :authenticate_user!
-    
     helper_method :current_node
 
     before_filter do

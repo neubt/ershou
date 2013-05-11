@@ -22,4 +22,9 @@
   = render @topic.comments.decorate
 
 .widget
-  = render :partial => 'ershou/comments/form', :locals => { :comment => @topic.comments.build }
+  - if can? :create, @topic.source => Ershou::Comment
+    = render :partial => 'ershou/comments/form', :locals => { :comment => @topic.comments.build }
+  - else
+    .alert.alert-error
+      = link_to "登录", main_app.new_user_session_path
+      | 后即可对交易进行回复
