@@ -12,6 +12,8 @@ module Ershou
     #has_many :attachments, :dependent => :destroy
 
     validates :title, :presence => true
+    validates :price, :presence => true
+    validates :phone, :presence => true
 
     state_machine :initial => :open do
       event 'open' do
