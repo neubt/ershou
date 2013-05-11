@@ -6,6 +6,12 @@ module Ershou
     delegate_all
     decorates_association :user
 
+    def human_comments_count
+      content_tag :span, class: "badge" do
+        "#{source.comments.size}"
+      end
+    end
+
     def human_node_name
       if source.node
         content_tag :span, class: :label do

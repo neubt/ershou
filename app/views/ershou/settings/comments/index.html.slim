@@ -1,5 +1,5 @@
 table.table
   = content_tag_for :tr, @comments do |comment|
-    td = link_to truncate(comment.content, :length => 60), [comment.topic, comment], :target => :_blank
+    td = link_to truncate(comment.content, :length => 60), [:edit, comment.topic, comment], :target => :_blank
 
 = paginate @comments

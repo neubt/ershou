@@ -7,7 +7,7 @@ module Ershou
     before_filter :authenticate_user!
 
     before_filter do
-      @nodes = Node.all
+      @nodes = Node.limit(20).decorate
       @current = [ topics_path ]
       drop_page_title("二手市场")
       drop_breadcrumb("二手市场", topics_path)

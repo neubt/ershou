@@ -13,6 +13,7 @@
       .widget.widget-info.widget-bordered
         h4 所有节点
         ul = content_tag_for :li, @nodes do |node|
+          .pull-right = node.human_topics_count
           = link_to node.name, node
 
 = render :template => "layouts/application"
