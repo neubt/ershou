@@ -15,6 +15,7 @@ git clone https://github.com/neubt/ershou.git
 cd ershou
 bundle install
 rake db:migrate:reset
+rake db:seed
 test/dummy/script/rails s
 ```
 
