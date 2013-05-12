@@ -21,7 +21,7 @@
       - if current_node
         .widget.widget-info.widget-bordered
           h4 当前节点
-          = current_node.name
+          = link_to current_node.name, current_node
           
       .widget.widget-info.widget-bordered
         h4 所有节点
