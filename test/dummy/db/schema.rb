@@ -14,14 +14,15 @@
 ActiveRecord::Schema.define(:version => 20130512140048) do
 
   create_table "ershou_attachments", :force => true do |t|
-    t.string   "uploaded_file_file_name"
-    t.string   "uploaded_file_content_type"
-    t.integer  "uploaded_file_file_size"
-    t.datetime "uploaded_file_updated_at"
+    t.string   "uploaded_file_name"
+    t.string   "uploaded_content_type"
+    t.integer  "uploaded_file_size"
+    t.datetime "uploaded_updated_at"
+    t.string   "uploaded_fingerprint"
     t.integer  "user_id"
     t.integer  "topic_id"
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
   end
 
   create_table "ershou_comments", :force => true do |t|
