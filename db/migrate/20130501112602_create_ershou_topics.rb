@@ -4,11 +4,13 @@ class CreateErshouTopics < ActiveRecord::Migration
       t.string :title
       t.string :price
       t.string :phone
+      t.string :qq
       t.text :content
       t.string :remote_ip
       t.string :state
       t.references :user
       t.references :node
+      t.integer :comments_count
       t.timestamps
     end
   end

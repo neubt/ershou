@@ -4,7 +4,7 @@ module Ershou
   class Topic < ActiveRecord::Base
 
     attr_accessible :title, :content
-    attr_accessible :price, :phone
+    attr_accessible :price, :phone, :qq
 
     belongs_to :user
     belongs_to :node
@@ -13,7 +13,9 @@ module Ershou
 
     validates :title, :presence => true
     validates :price, :presence => true
-    validates :phone, :presence => true
+    
+    #validates :phone, :presence => true
+    #validates :qq, :presence => true
 
     state_machine :initial => :open do
       event 'open' do

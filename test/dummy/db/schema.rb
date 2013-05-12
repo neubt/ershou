@@ -45,21 +45,24 @@ ActiveRecord::Schema.define(:version => 20130511025834) do
     t.string   "name"
     t.string   "city"
     t.string   "province"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "topics_count"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "ershou_topics", :force => true do |t|
     t.string   "title"
     t.string   "price"
     t.string   "phone"
+    t.string   "qq"
     t.text     "content"
     t.string   "remote_ip"
     t.string   "state"
     t.integer  "user_id"
     t.integer  "node_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "comments_count"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "users", :force => true do |t|

@@ -4,6 +4,7 @@ class CreateErshouNodes < ActiveRecord::Migration
       t.string :name
       t.string :city
       t.string :province
+      t.integer :topics_count
       t.timestamps
     end
   end
