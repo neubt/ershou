@@ -16,7 +16,7 @@ module Ershou
       @comment = build_resource
       @comment.topic = @topic
       @comment.user = current_user
-      @comment.remote_ip = request.remote_ip
+      @comment.remote_ip = current_remote_ip.to_s
 
       super do |success, failure|
         success.js { @comment = @comment.decorate }
