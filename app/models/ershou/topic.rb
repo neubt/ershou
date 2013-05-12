@@ -7,13 +7,13 @@ module Ershou
     attr_accessible :price, :phone, :qq
 
     belongs_to :user
-    belongs_to :node
+    belongs_to :node, :counter_cache => true
     has_many :comments, :dependent => :destroy
     #has_many :attachments, :dependent => :destroy
 
     validates :title, :presence => true
     validates :price, :presence => true
-    
+
     #validates :phone, :presence => true
     #validates :qq, :presence => true
 

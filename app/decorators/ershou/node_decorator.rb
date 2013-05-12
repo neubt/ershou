@@ -7,7 +7,7 @@ module Ershou
     
     def human_topics_count
       content_tag :span, class: "badge" do
-        "#{source.topics.size}"
+        "#{source.topics.count}"
       end
     end
   end

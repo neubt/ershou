@@ -7,7 +7,7 @@ module Ershou
     helper_method :current_node
 
     before_filter do
-      @nodes = Node.limit(200).decorate
+      @nodes = Node.order("topics_count DESC").limit(10).decorate
       @current = [ topics_path ]
       drop_page_title("二手市场")
       drop_breadcrumb("二手市场", topics_path)
