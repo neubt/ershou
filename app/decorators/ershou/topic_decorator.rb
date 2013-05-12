@@ -11,7 +11,7 @@ module Ershou
         true   => "badge badge-info",
         false  => "badge",
       }
-      content_tag :span, class: html_classes[current_user && source.unread?(current_user)] do
+      content_tag :span, class: html_classes[!!current_user && source.unread?(current_user)] do
         "#{source.comments.size}"
       end
     end
