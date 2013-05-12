@@ -32,5 +32,7 @@ Gem::Specification.new do |s|
   
   s.add_dependency "redcarpet", "~> 2.2.2"
 
+  s.add_dependency "unread", "~> 0.3.0"
+
   s.add_development_dependency "sqlite3"
 end

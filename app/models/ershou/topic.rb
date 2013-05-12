@@ -27,6 +27,8 @@ module Ershou
 
     end
 
+    acts_as_readable :on => :updated_at
+
     #before_create do |topic|
     #  remote_ip = IPAddr.new topic.remote_ip || "0.0.0.0"
     #  Location.all.each do |location|

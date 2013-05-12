@@ -14,5 +14,7 @@ require "paperclip"
 
 require 'redcarpet/compat'
 
+require 'unread'
+
 module Ershou
 end

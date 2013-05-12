@@ -6,5 +6,10 @@ module Ershou
     belongs_to :user
 
     validates :content, :presence => true
+
+    after_save do |comment|
+      comment.topic.touch
+    end
+    
   end
 end

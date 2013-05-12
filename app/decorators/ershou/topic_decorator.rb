@@ -7,7 +7,11 @@ module Ershou
     decorates_association :user
 
     def human_comments_count
-      content_tag :span, class: "badge" do
+      html_classes = {
+        true   => "badge badge-info",
+        false  => "badge",
+      }
+      content_tag :span, class: html_classes[source.unread?(current_user)] do
         "#{source.comments.size}"
       end
     end
