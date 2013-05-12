@@ -9,7 +9,9 @@ module Ershou
     def show
       super {
         @topic = resource.decorate
-        @topic.mark_as_read! :for => current_user
+        if current_user
+          @topic.mark_as_read! :for => current_user
+        end
       }
     end
   
