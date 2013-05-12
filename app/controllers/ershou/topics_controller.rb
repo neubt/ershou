@@ -15,7 +15,7 @@ module Ershou
     def create
       @topic = build_resource
       @topic.user = current_user
-      @topic.remote_ip = request.env["HTTP_X_FORWARDED_FOR"] || request.remote_ip
+      @topic.remote_ip = request.env["HTTP_X_FORWARDED_FOR"].split(",").first || request.remote_ip
       super
     end
 

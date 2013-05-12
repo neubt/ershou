@@ -20,7 +20,7 @@ module Ershou
 
       def current_node
         unless @node
-          remote_ip = IPAddr.new request.env["HTTP_X_FORWARDED_FOR"] || request.remote_ip || "0.0.0.0"
+          remote_ip = IPAddr.new request.env["HTTP_X_FORWARDED_FOR"].split(",").first || request.remote_ip || "0.0.0.0"
           Location.all.each do |location|
             prefix = IPAddr.new location.prefix || "0.0.0.0"
             if prefix.include?(remote_ip)
