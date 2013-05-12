@@ -9,7 +9,10 @@ module Ershou
     belongs_to :user
     belongs_to :node, :counter_cache => true
     has_many :comments, :dependent => :destroy
-    #has_many :attachments, :dependent => :destroy
+
+    has_many :attachments, :dependent => :destroy
+    accepts_nested_attributes_for :attachments
+    attr_accessible :attachments_attributes
 
     validates :title, :presence => true
     validates :price, :presence => true

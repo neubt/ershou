@@ -4,7 +4,11 @@
   = f.input :price, :label => false, :input_html => { :placeholder => "价格", :class => :span6 }
   = f.input :phone, :label => false, :input_html => { :placeholder => "电话", :class => :span6 }
   = f.input :qq, :label => false, :input_html => { :placeholder => "QQ", :class => :span6 }
-  /= f.input :attachments
+
+  - @topic.attachments.build
+  - @topic.attachments.build
+  = f.fields_for :attachments do |ff|
+    = ff.input :uploaded
 
   ul.nav.nav-tabs
     li.active = link_to "编写", "#content", "data-toggle" => "tab"
