@@ -7,7 +7,9 @@ zh-CN:
       ershou/topic:
         price: 价格
         phone: 电话
-      
+      ershou/attachment:
+        uploaded: 图片
+
   helpers:
     submit:
       comment:

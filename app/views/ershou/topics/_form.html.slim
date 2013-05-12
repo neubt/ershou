@@ -5,18 +5,18 @@
   = f.input :phone, :label => false, :input_html => { :placeholder => "电话", :class => :span6 }
   = f.input :qq, :label => false, :input_html => { :placeholder => "QQ", :class => :span6 }
 
-  - @topic.attachments.build
-  - @topic.attachments.build
-  = f.fields_for :attachments do |ff|
-    = ff.input :uploaded
-
   ul.nav.nav-tabs
     li.active = link_to "编写", "#content", "data-toggle" => "tab"
+    li = link_to "图片", "#attachments", "data-toggle" => "tab"
     li = link_to "预览", "#preview", "data-toggle" => "tab"
     
   .tab-content
     .tab-pane#content.active
       = f.input :content, :label => false, :input_html => { :rows => 5, :class => :span12, :placeholder => "内容" }
+    .tab-pane#attachments
+      - 5.times { @topic.attachments.build }
+      = f.fields_for :attachments do |ff|
+        = ff.input :uploaded
     .tab-pane#preview
       | 正在预览...
   
