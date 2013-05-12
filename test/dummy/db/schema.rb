@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(:version => 20130511025834) do
   end
 
   create_table "ershou_locations", :force => true do |t|
+    t.string   "name"
     t.string   "prefix"
     t.integer  "node_id"
     t.datetime "created_at", :null => false
