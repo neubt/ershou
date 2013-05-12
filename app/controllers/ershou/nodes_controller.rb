@@ -5,7 +5,7 @@ module Ershou
 
     def show
       @node = Node.find(params[:id])
-      @topics = @node.topics.where(:state => :open).page(params[:page]).decorate
+      @topics = @node.topics.where(:state => :open).page(params[:page]).reverse_order.decorate
 
       render 'ershou/topics/index'
     end
