@@ -10,6 +10,7 @@
     .tab-pane#preview
 
   .form-actions
+    | 帖子内容支持Markdown语法
     .pull-right
       - if can? :close, @topic
         =' link_to '关闭交易', [:close, @topic], :method => :put, :class => "btn"
