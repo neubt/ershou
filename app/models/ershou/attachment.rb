@@ -9,7 +9,7 @@ module Ershou
                                               :medium => "300x300#", 
                                               :thumb => "120x120#" },
                                   :convert_options => { :all => "-sharpen 1" },
-                                  :url => "/:class/:day_partition/:fingerprint.:style.:extension"
+                                  :url => "/:class/:day_partition/:timestamp_i:fingerprint_10.:style.:extension"
 
   end
 end
