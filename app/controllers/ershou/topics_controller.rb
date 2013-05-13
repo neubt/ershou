@@ -22,6 +22,12 @@ module Ershou
       @topic.node = current_node
       super
     end
+    
+    def destroy
+      super do |success, failure|
+        success.html { redirect_to topics_path }
+      end
+    end
 
     def open
       resource.fire_events(:open)
