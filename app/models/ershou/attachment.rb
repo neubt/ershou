@@ -11,5 +11,7 @@ module Ershou
                                   :convert_options => { :all => "-sharpen 1" },
                                   :url => "/:class/:day_partition/:timestamp_i:fingerprint_10.:style.:extension"
 
+    validates_attachment_content_type :uploaded, :content_type => /image/, :not => /php/
+
   end
 end
