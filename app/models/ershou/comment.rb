@@ -7,8 +7,14 @@ module Ershou
 
     validates :content, :presence => true
 
+    acts_as_paranoid
+    acts_as_list scope: :topic_id
+
     after_save do |comment|
       comment.topic.touch
+    end
+    
+    def decrement_positions_on_lower_items
     end
     
   end

@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20130512140048) do
     t.string   "uploaded_fingerprint"
     t.integer  "user_id"
     t.integer  "topic_id"
+    t.datetime "deleted_at"
     t.datetime "created_at",            :null => false
     t.datetime "updated_at",            :null => false
   end
@@ -30,6 +31,8 @@ ActiveRecord::Schema.define(:version => 20130512140048) do
     t.string   "remote_ip"
     t.integer  "user_id"
     t.integer  "topic_id"
+    t.integer  "position"
+    t.datetime "deleted_at"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -62,6 +65,7 @@ ActiveRecord::Schema.define(:version => 20130512140048) do
     t.integer  "user_id"
     t.integer  "node_id"
     t.integer  "comments_count"
+    t.datetime "deleted_at"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
   end

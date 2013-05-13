@@ -6,6 +6,7 @@ class CreateErshouAttachments < ActiveRecord::Migration
       
       t.references :user
       t.references :topic
+      t.datetime :deleted_at
       t.timestamps
     end
   end

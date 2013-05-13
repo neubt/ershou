@@ -11,6 +11,7 @@ class CreateErshouTopics < ActiveRecord::Migration
       t.references :user
       t.references :node
       t.integer :comments_count
+      t.datetime :deleted_at
       t.timestamps
     end
   end

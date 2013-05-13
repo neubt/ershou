@@ -24,6 +24,12 @@
         text-decoration: none;
         color: #08C;
       }
+      .badge {
+        background-color: #DDDDDD;
+      }
+      .badge-info {
+        background-color: #3A87AD;
+      }
     }
     
   }
@@ -53,7 +59,7 @@
   }
 }
 
-#topic_title, #topic_price, #topic_phone {
+#topic_title, #topic_price, #topic_phone, #topic_qq {
   font-size: 1.5em;
   line-height: 1.5em;
   height: 2em;

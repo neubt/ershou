@@ -21,18 +21,15 @@ Gem::Specification.new do |s|
   # s.add_dependency "jquery-rails"
   s.add_dependency "cancan", "~> 1.6.9"
   s.add_dependency "inherited_resources", "~> 1.4.0"
-  
   s.add_dependency "kaminari", "~> 0.14.1"
   s.add_dependency "kaminari-bootstrap", "~> 0.1.3"
-  
   s.add_dependency "slim", "~> 1.3.8"
   s.add_dependency "state_machine", "~> 1.2.0"
-  
   s.add_dependency "paperclip", "~> 3.4.1"
-  
   s.add_dependency "redcarpet", "~> 2.2.2"
-
   s.add_dependency "unread", "~> 0.3.0"
+  s.add_dependency "acts_as_paranoid", "~> 0.4.1"
+  s.add_dependency "acts_as_list", "~> 0.2.0"
 
   s.add_development_dependency "sqlite3"
 end

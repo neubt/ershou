@@ -27,6 +27,8 @@ PATH
   remote: .
   specs:
     ershou (0.0.1)
+      acts_as_list (~> 0.2.0)
+      acts_as_paranoid (~> 0.4.1)
       cancan (~> 1.6.9)
       inherited_resources (~> 1.4.0)
       kaminari (~> 0.14.1)
@@ -69,6 +71,10 @@ GEM
     activesupport (3.2.13)
       i18n (= 0.6.1)
       multi_json (~> 1.0)
+    acts_as_list (0.2.0)
+      activerecord (>= 3.0)
+    acts_as_paranoid (0.4.1)
+      activerecord (~> 3.2)
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
     bootstrap-datepicker-rails (1.0.0.5)

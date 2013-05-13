@@ -13,5 +13,7 @@ module Ershou
 
     validates_attachment_content_type :uploaded, :content_type => /image/, :not => /php/
 
+    acts_as_paranoid
+
   end
 end

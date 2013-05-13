@@ -19,6 +19,8 @@ module Ershou
 
     #validates :phone, :presence => true
     #validates :qq, :presence => true
+    
+    acts_as_paranoid
 
     state_machine :initial => :open do
       event 'open' do
