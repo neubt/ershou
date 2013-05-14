@@ -18,7 +18,7 @@
       li = "出售价格：#{@topic.price}"
       li = "电话号码：#{@topic.phone}"
       li = "QQ号码：#{@topic.qq}"
-    = markdown @topic.content
+    = simple_format markdown auto_link @topic.content
 
     .attachments.clearfix
       = render @topic.attachments.decorate

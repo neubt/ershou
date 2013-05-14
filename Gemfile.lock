@@ -23,6 +23,13 @@ GIT
       slim (~> 1.3.8)
       unread (~> 0.3.0)
 
+GIT
+  remote: git://github.com/neubt/twitter-text-rb.git
+  revision: 543a10cffbc43bfe763522512fcd849fc4c4c629
+  specs:
+    twitter-text (1.6.1)
+      unf (~> 0.1.0)
+
 PATH
   remote: .
   specs:
@@ -39,6 +46,7 @@ PATH
       simple_form (~> 2.0.4)
       slim (~> 1.3.8)
       state_machine (~> 1.2.0)
+      twitter-text (~> 1.6.1)
       unread (~> 0.3.0)
 
 GEM
@@ -214,6 +222,9 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.37)
+    unf (0.1.1)
+      unf_ext
+    unf_ext (0.0.6)
     unread (0.3.0)
       activerecord (>= 3)
     warden (1.2.1)
@@ -234,3 +245,4 @@ DEPENDENCIES
   sass-rails (~> 3.2.6)
   sqlite3
   therubyracer
+  twitter-text!
