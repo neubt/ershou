@@ -30,6 +30,7 @@ Gem::Specification.new do |s|
   s.add_dependency "unread", "~> 0.3.0"
   s.add_dependency "acts_as_paranoid", "~> 0.4.1"
   s.add_dependency "acts_as_list", "~> 0.2.0"
+  s.add_dependency "twitter-text", "~> 1.6.1"
 
   s.add_development_dependency "sqlite3"
 end

@@ -12,6 +12,7 @@ require 'redcarpet/compat'
 require 'unread'
 require 'acts_as_paranoid'
 require 'acts_as_list'
+require 'twitter-text'
 
 module Ershou
 end

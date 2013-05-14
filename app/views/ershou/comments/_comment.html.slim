@@ -9,6 +9,7 @@
         =' link_to "#", :data => { :position => comment.position, :username => comment.user.name } do
           i.icon-share-alt
       span.user =' link_to comment.user.name, main_app.user_path(comment.user) if comment.user
+      a name="#{comment.position}楼"
       span.position =' "#{comment.position}楼"
       span.created_at =' "#{time_ago_in_words(comment.created_at)}前发表"
-    = simple_format markdown comment.content
+    = simple_format markdown auto_link comment.content

@@ -3,6 +3,8 @@ require_dependency "ershou/application_controller"
 module Ershou
   class CommentsController < ApplicationController
 
+    include Twitter::Extractor
+
     load_and_authorize_resource :class => Comment
     inherit_resources
     belongs_to :topic, :parent_class => Topic
@@ -19,7 +21,9 @@ module Ershou
       @comment.remote_ip = current_remote_ip.to_s
 
       super do |success, failure|
-        success.js { @comment = @comment.decorate }
+        success.js do
+          @comment = @comment.decorate
+        end
         failure.js { render :js => "alert('Error');" }
       end
     end

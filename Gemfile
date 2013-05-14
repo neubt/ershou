@@ -30,3 +30,4 @@ gem 'coffee-rails', '~> 3.2.2'
 
 gem "bootstrap-widgets", :git => "git://github.com/neubt/bootstrap-widgets.git"
 gem "common", :git => "git://github.com/neubt/common.git"
+gem "twitter-text", :git => "git://github.com/neubt/twitter-text-rb.git"
