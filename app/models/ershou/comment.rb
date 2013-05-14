@@ -17,7 +17,7 @@ module Ershou
     
     after_create do |comment|
       unless comment.user == comment.topic.user
-        comment.topic.user.notify("二手市场回复提醒", "您的主题：《#{comment.topic}》有新的回复")
+        comment.topic.user.notify("二手市场回复提醒", "您的主题：《#{comment.topic.title}》有新的回复")
       end
     end
     
