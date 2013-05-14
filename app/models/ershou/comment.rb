@@ -1,5 +1,6 @@
 module Ershou
   class Comment < ActiveRecord::Base
+    
     attr_accessible :content
 
     belongs_to :topic, :counter_cache => true
@@ -10,8 +11,14 @@ module Ershou
     acts_as_paranoid
     acts_as_list scope: :topic_id
 
-    after_save do |comment|
+    after_create do |comment|
       comment.topic.touch
+    end
+    
+    after_create do |comment|
+      unless comment.user == comment.topic.user
+        comment.topic.user.notify("二手市场回复提醒", "您的主题：《#{comment.topic}》有新的回复")
+      end
     end
     
     def decrement_positions_on_lower_items
