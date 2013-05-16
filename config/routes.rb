@@ -20,6 +20,7 @@ Ershou::Engine.routes.draw do
   end
   
   namespace :admin do
+    resources :locations
     resources :nodes
     resources :topics
     resources :comments
